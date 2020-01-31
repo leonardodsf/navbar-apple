@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css">
+  <title>Navigation Bar Like Apple.com</title>
+</head>
+
+<body>
+  <nav>
+    <div class="menu">
+      <ul>
+        <li><a href="#"><i class="fab fa-apple"></i></a></li>
+        <li><a href="#" class="menu-item">Mac</a></li>
+        <li><a href="#" class="menu-item">iPad</a></li>
+        <li><a href="#" class="menu-item">iPhone</a></li>
+        <li><a href="#" class="menu-item">Watch</a></li>
+        <li><a href="#" class="menu-item">TV</a></li>
+        <li><a href="#" id="search"><i class="fa fa-search hover"></i></a></li>
+        <li><a href="#"><i class="fas fa-shopping-cart hover"></i></a></li>
+      </ul>
+      <div class="search-form">
+        <form>
+          <input type="text" name="" placeholder="Search here">
+        </form>
+      </div>
+      <a class="close"><i class="fa fa-times"></i></a>
+    </div>
+  </nav>
+  <div class="background">
+   <img src="images/banner.jpg">
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      $(document).ready( function(){
+        $('#search').click( function(){
+          $('.menu-item').addClass('hide-item');
+          $('.search-form').addClass('active');
+          $('.close').addClass('active');
+          $('#search').hide();
+        });
+        $('.close').click( function(){
+          $('.menu-item').removeClass('hide-item');
+          $('.search-form').removeClass('active');
+          $('.close').removeClass('active');
+          $('#search').show();
+        });
+      });
+    </script>
+</body>
+
+</html>
